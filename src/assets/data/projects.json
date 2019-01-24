@@ -1,0 +1,83 @@
+[
+    {
+        "name": "Sensu Installation Package",
+        "start": "February 2018",
+        "end": "April 2018",
+        "description": "We needed to take our Sensu monitoring platform from its proof of concept stage to a fully deployed monitoring solution. I created the installation package that installed and configured the monitoring agent on machines.",
+        "challenges": "We had two methods of deploying the package: Opsware and Rundeck. Opsware accepted bash, python and powershell scripts while Rundeck accepted Ansible playbooks. Rundeck had cross-platform playbooks, and Opsware for windows was pretty safe with powershell 3. The hardest part was linux for Opsware. There were so many flavors of linux and versions of kernals. After I got major installation steps completed, I spent plenty of time tweaking the package to work perfectly on different linux flavors.",
+        "stack": ["bash", "python", "powershell", "ansible"]
+    },
+    {
+        "name": "Grafana CAPM Datasource",
+        "start": "May 2018",
+        "end": "May 2018",
+        "description": "Our network team needed to view data that was collected from CA Performance Manager (CAPM), so two developers and I wrote a datasource that wrapped a CAPM api. This allowed the network team to view all of their existing data in a single pane within Grafana.",
+        "challenges": "None of us knew anything about Grafana or CAPM. We spent the first few days researching and reverse engineering an obfuscated proof of concept example. After we started painting the picture, we quickly finished the project in a week.",
+        "stack": ["angular", "html", "css"]
+    },
+    {
+        "name": "Grafana ServiceNow Datasource",
+        "start": "August 2018",
+        "end": "August 2018",
+        "description": "Asset owners wanted to see if any open alerts/tickets were opened against their servers. They wanted to see all of this information within a single pane inside Grafana.",
+        "challenges": "Wrapping the api was difficult because the documentation was poor. Eventually my team and I found the necessary endpoints and wrapped this project up quickly.",
+        "stack": ["angular", "html", "css"]
+    },
+    {
+        "name": "Sensu Self-Updating Client",
+        "start": "July 2018",
+        "end": "September 2018",
+        "description": "We wanted our monitoring agents to maintain and update themselves, so would not need to create a bunch of change tickets every time we had to roll out an update.",
+        "challenges": "We had no guaranteed connection to the server besides RabbitMQ, our message bus. We came up with a solution to serialize data, send it through RabbitMQ, rebuild the data on the client and install the data. A major contributor of Sensu said that reloading the agent without root was impossible, but we managed to reload certain pieces of the client to mimic a reload initiated by root. The next challenging part was fixing bugs. Our standalone development environment only got us so far. Many bugs showed when we moved to a distributed environment. Needless to say, we fixed the bugs. To add more complexity, we had to migrate chef to new environment in the middle of project. ",
+        "stack": ["ruby", "sensu", "rabbitmq"]
+    },
+    {
+        "name": "Landon Dao Profile v1",
+        "start": "November 2017",
+        "end": "January 2018",
+        "description": "Around the time I started looking for a new job, I realized I had no way of showing my capabilities with web development. I spent years researching modern design trends and UI/UX. I created a simple and clean website to showcase my portfolio.",
+        "challenges": "I totally enjoyed the process. I would say the challenging part was actually finishing the website. I looked up methods to host a static website and came accross github pages. It was perfect for me!",
+        "stack": ["javascript", "html", "css"]
+    },
+    {
+        "name": "Landon Dao Profile v2",
+        "start": "August 2018",
+        "end": "August 2018",
+        "description": "I always wanted to learn a modern JS framework. I like front end web development very much. Creating this website was my excuse to learn something new.",
+        "challenges": "I enjoyed this project just like I enjoy everything I do outside of work. A slight challenge I came across was trying to load an image from a dynamic source.",
+        "stack": ["react", "html", "css"],
+        "link": "https://github.com/landondao1/v2"
+    },
+    {
+        "name": "Sensu Event Management Handler v2",
+        "start": "September 2018",
+        "end": "September 2018",
+        "description": "There was already a v1 of a sensu handler that took events that sensu generated and sent them to a data processing queue called Event Management which sent alerts to Service Now.",
+        "challenges": "When I first saw the code, I noticed many functions were doing much more than the function name stated. Getters were setting fields and every variable was an instance variable regardless of scope. I refactored to code to be modular and plugable. Another issue was test cases. The repo previously had only a few test cases. I increased the number to 54 and covered every case, so any bad data would not break the handler.",
+        "stack": ["sensu", "python"]
+    },
+    {
+        "name": "Chef Migration",
+        "start": "August 2018",
+        "end": "October 2018",
+        "description": "GE was getting rid of the Chef server that everyone used. We had a few weeks to migrate our cookbooks/data bags/policies elsewhere. We decided to spin up our own chef automate server and chef server.",
+        "challenges": "Getting the servers to cooperate with LDAP took a while. I had all of my configurations correct. The problem was the base_dn I was given. It was all lowercase with a single character capitalized. I thought it was meant to be capitalized, so I struggled with the errors until I finally found someone who gave me the correct base_dn with all lowercase characters. The second problem was allowing clients to bootstrap without having to manually trust the server's certificate. After getting a signed certificate from a certificate authority, I put the certificate on the server and pointed nginx to use them. Our next problem occurred when we started spinning up new instances using our new chef server. All of the cookbooks were failing because they were outdated. To add complexity, GE github removed anonymous access which most of our cookbooks accessed github repos without authentication. We fixed all of the cookbooks and upgraded our self-managed redis cluster to an AWS managed elasticache redis cluster. Overall performance of the platform greatly increased.",
+        "stack": ["aws", "chef", "nginx", "redis"]
+    },
+    {
+        "name": "Sensu SNMP Traps",
+        "start": "October 2018",
+        "end": "November 2018",
+        "description": "In order to consolidate the tech stack, we incorporated snmp traps into sensu. The goal was to be able to scale out the trap servers behind an nginx load balancer. We created a cookbook to provision a sensu client with an snmp trap receiver plugin, updated an existing nginx cookbook to allow a udp upstream and configured AWS NACL/Security Groups for our vpc, subnet and ec2 instances to allow inbound traffic on port 162. I really enjoyed this project because it allowed me to learn so much about networking.",
+        "challenges": "We stood up the servers quickly, but the network firewall rules controlled by the network team denied us. To overcome this, we submitted change requests to open our ports. The second and main issue is forwarding the source ip address to the snmp traps. The nginx load balancer was sending its own ip address with the request to the snmp server. We ended up configuring ip transparency on the nginx servers and disabling the source/destination check on the elastic network interface.",
+        "stack": ["aws", "chef", "nginx", "sensu"]
+    },
+    {
+        "name": "Event Management API",
+        "start": "December 2018",
+        "end": "Present",
+        "description": "Event Management is a system that custered events together to reduce alarm noises. The api allowed users to post events, silence assets that events alert, and route event to different support groups.",
+        "challenges": "I inherited this api in a state of confusion. The team previously running the api inherited it from another team that was disbanded. This project was difficult to develop locally, which made deployments very scary. The first thing I did was set up a local environment and spin up the tornado api on my machine. I started by fixing many bugs and inefficiencies. After everything seemed well, I worked on adding more functionality that allowed the system to perform more intelligently.",
+        "stack": ["aws", "python"]
+    }
+]

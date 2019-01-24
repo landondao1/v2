@@ -1,0 +1,115 @@
+* {
+  font-family: sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: initial;
+}
+#feature {    
+  background: #233d7e;
+  background-image: linear-gradient(to right, rgba(35, 61, 126, 0.6), rgba(57, 102, 163, 0.6), rgba(35, 61, 126, 0.6)),url(img/background_waterfall.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-shadow: inset 0px -5px 5px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0px -5px 5px rgba(0,0,0,0.3);
+  box-shadow: inset 0px -5px 5px rgba(0,0,0,0.3);
+  background-size: cover;
+  padding: 50px 0;
+  min-height: 700px;
+  max-height: 900px;
+  height: 100vh;
+}
+.page-title {
+  text-shadow: 1px 1px black;
+  color: whitesmoke;
+  text-align: center;
+  margin-bottom: 0;
+}
+h1.page-title {
+  margin-top: 40px;
+  font-size: 5em;
+}
+h3.page-title {
+  font-weight: 100;
+  margin-top: 0;
+}
+#page {
+  padding-bottom: 50px;
+  padding-top: 70px;
+}
+.content-panel {
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  max-width: 100%;
+  width: 1000px;
+  margin: auto;
+}
+.jumbotron {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.centered {
+  text-align: center;
+}
+.medium-image {
+  margin: 15px 0; 
+  height: 100px;
+}
+.small-image {
+  height: 64px;
+}
+.tiny-image {
+  margin-right: 3px;
+  height: 16px;
+}
+.container {
+  max-width: 100%;
+}
+.page-header {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.bottom-padding {
+  padding-bottom: 15px;
+}
+.no-padding {
+  padding: 0px;
+}
+.panel {
+  overflow: hidden;
+}
+.full-width {
+  max-width: 100%;
+}
+.expanded-width {
+  margin-left: -25%;
+  width: 150%;
+}
+.strong {
+  font-weight: bold;
+}
+.skinny {
+  font-weight: 100;
+}
+.more-info {
+  color: #b7b7b7;
+  margin-bottom: 0;
+  font-weight: 100;
+  font-size: 12px;
+  float: right;
+}
+.clickable:hover .more-info {
+  color: #24a0ff;
+}
+.clickable:hover {
+  -webkit-transition: box-shadow 0.2s; /* Safari */
+  transition: box-shadow 0.2s;
+  box-shadow: 0px 2px 10px #7b7b7b;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  h1.page-title {
+    font-size: 4em;
+  }
+}

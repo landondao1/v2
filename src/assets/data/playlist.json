@@ -1,0 +1,32 @@
+[
+    {
+        "url": "https://github.com/landondao1/v2/blob/master/src/assets/audio/chocolate.mp3?raw=true",
+        "cover": "img/the_1975.jpg",
+        "title": "Chocolate",
+        "artist": ["The 1975"]
+    },
+    {
+        "url": "https://github.com/landondao1/v2/blob/master/src/assets/audio/im_not_okay.mp3?raw=true",
+        "cover": "img/my_chemical_romance.jpg",
+        "title": "I'm Not Okay",
+        "artist": ["My Chemical Romance"]
+    },
+    {
+        "url": "https://github.com/landondao1/v2/blob/master/src/assets/audio/float_on.mp3?raw=true",
+        "cover": "img/modest_mouse.jpg",
+        "title": "Float On",
+        "artist": ["Modest Mouse"]
+    },
+    {
+        "url": "https://github.com/landondao1/v2/blob/master/src/assets/audio/mr_brightside.mp3?raw=true",
+        "cover": "img/the_killers.jpg",
+        "title": "Mr Brightside",
+        "artist": ["The Killers"]
+    },
+    {
+        "url": "https://github.com/landondao1/v2/blob/master/src/assets/audio/here_in_your_arms.mp3?raw=true",
+        "cover": "img/hellogoodbye.jpg",
+        "title": "Here (In Your Arms)",
+        "artist": ["Hellogoodbye"]
+    }
+]

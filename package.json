@@ -1,0 +1,26 @@
+{
+  "name": "profile",
+  "version": "0.3.1",
+  "private": true,
+  "homepage": "https://landondao1.github.io/v2",
+  "dependencies": {
+    "gh-pages": "^1.2.0",
+    "react": "^16.4.2",
+    "react-bootstrap": "^0.32.3",
+    "react-device-detect": "^1.6.1",
+    "react-dom": "^16.4.2",
+    "react-notifications-component": "^0.1.1",
+    "react-responsive-music-player": "^0.3.0",
+    "react-reveal": "^1.2.2",
+    "react-scripts": "1.1.5",
+    "react-waypoint": "^8.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "eject": "react-scripts eject"
+  }
+}

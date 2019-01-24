@@ -1,0 +1,40 @@
+.volume-wrapper .progress {
+  margin-top: -2px;
+  height: 5px;
+}
+.player-container {
+  position: relative;
+}
+.progress-container {
+    height: 8px!important;
+}
+.player-container .cover-container {
+  width: 185px;
+  height: 185px;
+}
+.player-container .cover-container .cover {
+  border-radius: 0;
+  height: 185px;
+  width: 185px;
+  margin: auto;
+}
+.player-container .info-and-control .control-container {
+  margin-top: 0.7em;
+}
+@media (min-width: 576px) {
+  .player-container .info-and-control {
+    padding-right: 220px;
+    height: 185px;
+    width: 100%;
+  }
+  .cover-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+@media (max-width: 576px) {
+  .player-container .info-and-control .control-container .fa-refresh {
+    display: none;
+  }
+}

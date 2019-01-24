@@ -1,0 +1,82 @@
+{
+    "react": {
+        "name": "React",
+        "image": "react.png"
+    },
+    "angular": {
+        "name": "Angular",
+        "image": "angular.png"
+    },
+    "javascript": {
+        "name": "Javascript",
+        "image": "javascript.png"
+    },
+    "html": {
+        "name": "HTML",
+        "image": "html.png"
+    },
+    "css": {
+        "name": "CSS",
+        "image": "css.png"
+    },
+    "java": {
+        "name": "Java",
+        "image": "java.png"
+    },
+    "mysql": {
+        "name": "MySQL",
+        "image": "mysql.png"
+    },
+    "bash": {
+        "name": "Bash",
+        "image": "bash.png"
+    },
+    "powershell": {
+        "name": "Powershell",
+        "image": "powershell.png"
+    },
+    "python": {
+        "name": "Python",
+        "image": "python.png"
+    },
+    "ruby": {
+        "name": "Ruby",
+        "image": "ruby.png"
+    },
+    "chef": {
+        "name": "Chef",
+        "image": "chef.png"
+    },
+    "ansible": {
+        "name": "Ansible",
+        "image": "ansible.png"
+    },
+    "sensu": {
+        "name": "Sensu",
+        "image": "sensu.png"
+    },
+    "rabbitmq": {
+        "name": "RabbitMQ",
+        "image": "rabbitmq.png"
+    },
+    "influxdb": {
+        "name": "InfluxDB",
+        "image": "influxdb.png"
+    },
+    "nginx": {
+        "name": "Nginx",
+        "image": "nginx.png"
+    },
+    "aws": {
+        "name": "AWS",
+        "image": "aws.png"
+    },
+    "redis": {
+        "name": "Redis",
+        "image": "redis.png"
+    },
+    "github": {
+        "name": "GitHub",
+        "image": "github.png"
+    }
+}

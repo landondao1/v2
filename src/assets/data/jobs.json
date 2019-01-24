@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Lifecycle Operations Engineer",
+        "company": "General Electric",
+        "start": "December 2017",
+        "end": "",
+        "logo": "general_electric.png",
+        "description": "Moving to GE is the best thing I've ever done. The tech stack is pretty large which exposed me to many languages and applications. I got to see the different coding styles and design patterns. Everyone at this company was smart, and I did not hesitate to learn from them. My role started out as a developer, but quickly turned into more of a site reliability engineer. I learned the ins and outs of linux and windows machines as well as many languages. Although GE was going through a tough transitional period, I found it to be the most challenging and exciting part about the company. In this role, I acted as the team lead and the person with all of the answers when questions were asked. I did not want it to be that way, but my manager was drowning being the team lead and managing, so I stepped up."
+    },
+    {
+        "title": "Software Engineer",
+        "company": "Classified",
+        "start": "May 2015",
+        "end": "December 2017",
+        "logo": "top_secret.png",
+        "description": "The stuff I worked on was top secret. I wish I could show you all of the really cool complex things I did, but that wouldn't be safe for you nor myself."
+    },
+    {
+        "title": "Programming/IT Tutor",
+        "company": "Georgia Gwinnett College",
+        "start": "May 2015",
+        "end": "August 2013",
+        "logo": "georgia_gwinnett.png",
+        "description": "After my first semester of java programming, my professor saw that I had enough talent to recommend me to be a programming tutor. I saw it as an opportunity to get ahead. Although I was not the strongest tutor in the college, I unofficially sat in on advanced programming classes to better my skills and better aid more advanced students."
+    }
+]
