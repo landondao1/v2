@@ -78,5 +78,107 @@
     "github": {
         "name": "GitHub",
         "image": "github.png"
+    },
+    "msk": {
+        "name": "AWS MSK",
+        "image": "msk.png"
+    },
+    "ec2": {
+        "name": "AWS EC2",
+        "image": "ec2.png"
+    },
+    "elasticache": {
+        "name": "AWS Elasticache",
+        "image": "elasticache.png"
+    },
+    "rds": {
+        "name": "AWS RDS",
+        "image": "rds.png"
+    },
+    "kafka": {
+        "name": "Kafka",
+        "image": "kafka.png"
+    },
+    "neptune": {
+        "name": "Neptune",
+        "image": "neptune.png"
+    },
+    "gremlin": {
+        "name": "Gremlin",
+        "image": "gremlin.png"
+    },
+    "tornado": {
+        "name": "Tornado",
+        "image": "tornado.png"
+    },
+    "gateway": {
+        "name": "AWS API Gateway",
+        "image": "gateway.png"
+    },
+    "lambda": {
+        "name": "AWS Lambda",
+        "image": "lambda.png"
+    },
+    "express": {
+        "name": "Express",
+        "image": "express.png"
+    },
+    "nodejs": {
+        "name": "NodeJS",
+        "image": "nodejs.png"
+    },
+    "mongo": {
+        "name": "Mongo",
+        "image": "mongo.png"
+    },
+    "postgres": {
+        "name": "Postgres",
+        "image": "postgres.png"
+    },
+    "atlas": {
+        "name": "Netflix Atlas",
+        "image": "atlas.png"
+    },
+    "grafana": {
+        "name": "Grafana",
+        "image": "grafana.png"
+    },
+    "handlebars": {
+        "name": "Handlebars",
+        "image": "handlebars.png"
+    },
+    "wildfly": {
+        "name": "WildFly",
+        "image": "wildfly.png"
+    },
+    "apache": {
+        "name": "Apache",
+        "image": "apache.png"
+    },
+    "jboss": {
+        "name": "JBoss",
+        "image": "jboss.png"
+    },
+    "mssql": {
+        "name": "Microsoft SQL Server",
+        "image": "mssql.png"
+    },
+    "terraform": {
+        "name": "Terraform",
+        "image": "terraform.png"
+    },
+    "jsf": {
+        "name": "JavaServer Faces",
+        "image": "jsf.png"
+    },
+    "aws_sysops_administrator": {
+        "name": "AWS SysOps Administrator",
+        "image": "aws_sysops_administrator.png",
+        "link": "https://www.certmetrics.com/amazon/public/badge.aspx?i=3&t=c&d=2018-08-24&ci=AWS00603303"
+    },
+    "aws_developer": {
+        "name": "AWS Developer",
+        "image": "aws_developer.png",
+        "link": "https://www.certmetrics.com/amazon/public/badge.aspx?i=2&t=c&d=2018-10-19&ci=AWS00603303"
     }
 }

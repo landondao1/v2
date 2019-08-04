@@ -57,11 +57,15 @@ h3.page-title {
   height: 100px;
 }
 .small-image {
-  height: 64px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  max-height: 32px;
+  max-width: 32px;
 }
 .tiny-image {
   margin-right: 3px;
-  height: 16px;
+  max-height: 16px;
+  max-width: 16px;
 }
 .container {
   max-width: 100%;
@@ -72,6 +76,11 @@ h3.page-title {
 }
 .bottom-padding {
   padding-bottom: 15px;
+}
+.highlight-padding {
+  padding-bottom: 5%;
+  padding-right: 5%;
+  padding-left: 5%;
 }
 .no-padding {
   padding: 0px;

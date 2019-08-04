@@ -1,22 +1,63 @@
-[
-    "react",
-    "angular",
-    "javascript",
-    "html",
-    "css",
-    "java",
-    "mysql",
-    "bash",
-    "powershell",
-    "python",
-    "ruby",
-    "chef",
-    "ansible",
-    "sensu",
-    "redis",
-    "rabbitmq",
-    "influxdb",
-    "nginx",
-    "aws",
-    "github"
-]
+{
+    "Languages": [
+        "javascript",
+        "html",
+        "css",
+        "java",
+        "bash",
+        "powershell",
+        "python",
+        "ruby",
+        "nodejs",
+        "gremlin"
+    ],
+    "Databases": [
+        "mongo",
+        "mysql",
+        "redis",
+        "postgres",
+        "influxdb",
+        "atlas",
+        "mssql"
+    ],
+    "Software": [
+        "terraform",
+        "chef",
+        "ansible",
+        "kafka",
+        "sensu",
+        "rabbitmq",
+        "nginx"
+    ],
+    "Middleware": [
+        "apache",
+        "jboss",
+        "wildfly",
+        "express",
+        "tornado"
+    ],
+    "Frameworks": [
+        "angular",
+        "react",
+        "handlebars",
+        "jsf"
+    ],
+    "AWS": [
+        "msk",
+        "elasticache",
+        "rds",
+        "ec2",
+        "gateway",
+        "lambda",
+        "neptune"
+    ],
+    "Other": [
+        "aws",
+        "github",
+        "grafana"
+    ],
+    "Certifications": [
+        "aws_developer",
+        "aws_sysops_administrator"
+    ]
+}

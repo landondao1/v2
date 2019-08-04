@@ -13,7 +13,7 @@
         "end": "May 2018",
         "description": "Our network team needed to view data that was collected from CA Performance Manager (CAPM), so two developers and I wrote a datasource that wrapped a CAPM api. This allowed the network team to view all of their existing data in a single pane within Grafana.",
         "challenges": "None of us knew anything about Grafana or CAPM. We spent the first few days researching and reverse engineering an obfuscated proof of concept example. After we started painting the picture, we quickly finished the project in a week.",
-        "stack": ["angular", "html", "css"]
+        "stack": ["grafana", "angular", "html", "css"]
     },
     {
         "name": "Grafana ServiceNow Datasource",
@@ -21,7 +21,7 @@
         "end": "August 2018",
         "description": "Asset owners wanted to see if any open alerts/tickets were opened against their servers. They wanted to see all of this information within a single pane inside Grafana.",
         "challenges": "Wrapping the api was difficult because the documentation was poor. Eventually my team and I found the necessary endpoints and wrapped this project up quickly.",
-        "stack": ["angular", "html", "css"]
+        "stack": ["grafana", "angular", "html", "css"]
     },
     {
         "name": "Sensu Self-Updating Client",
@@ -62,7 +62,7 @@
         "end": "October 2018",
         "description": "GE was getting rid of the Chef server that everyone used. We had a few weeks to migrate our cookbooks/data bags/policies elsewhere. We decided to spin up our own chef automate server and chef server.",
         "challenges": "Getting the servers to cooperate with LDAP took a while. I had all of my configurations correct. The problem was the base_dn I was given. It was all lowercase with a single character capitalized. I thought it was meant to be capitalized, so I struggled with the errors until I finally found someone who gave me the correct base_dn with all lowercase characters. The second problem was allowing clients to bootstrap without having to manually trust the server's certificate. After getting a signed certificate from a certificate authority, I put the certificate on the server and pointed nginx to use them. Our next problem occurred when we started spinning up new instances using our new chef server. All of the cookbooks were failing because they were outdated. To add complexity, GE github removed anonymous access which most of our cookbooks accessed github repos without authentication. We fixed all of the cookbooks and upgraded our self-managed redis cluster to an AWS managed elasticache redis cluster. Overall performance of the platform greatly increased.",
-        "stack": ["aws", "chef", "nginx", "redis"]
+        "stack": ["aws", "chef", "nginx", "redis", "rabbitmq"]
     },
     {
         "name": "Sensu SNMP Traps",
@@ -75,9 +75,41 @@
     {
         "name": "Event Management API",
         "start": "December 2018",
-        "end": "Present",
-        "description": "Event Management is a system that custered events together to reduce alarm noises. The api allowed users to post events, silence assets that events alert, and route event to different support groups.",
+        "end": "August 2019",
+        "description": "Event Management is a system that clustered events together to reduce alarm noises. The api allowed users to post events, silence assets that events alert, and route event to different support groups.",
         "challenges": "I inherited this api in a state of confusion. The team previously running the api inherited it from another team that was disbanded. This project was difficult to develop locally, which made deployments very scary. The first thing I did was set up a local environment and spin up the tornado api on my machine. I started by fixing many bugs and inefficiencies. After everything seemed well, I worked on adding more functionality that allowed the system to perform more intelligently.",
-        "stack": ["aws", "python"]
+        "stack": ["ec2", "kafka", "elasticache", "rds", "python", "tornado"]
+    },
+    {
+        "name": "Event Management API v2",
+        "start": "February 2019",
+        "end": "Present",
+        "description": "After stablizing Event Management, I realized that it would not be able to scale any further. The vpc we hosted the platform in ran out of ip addresses for the subnet making it impossible to horizontally scale our tornado api. In attempt to design a platform for the future, I decided to use a serverless (almost) model.",
+        "challenges": "The easy part was redesigning the application code to be easier to read as well as operate more efficiently. On the contrary, my team and I faced many bugs deploying our api gateway and lambda in aws. When we deployed our api with cloudformation, everything seemed fine, but we kept getting an internal server error. After adding debug statements, we realized that our api gateway was linked to different lambda version, and we received an APP_SPEC error. We implemented a workaround that aws support provided and received an entirely different bug in aws. With these two bugs, we found a workaround that worked some of the time which was the best thing we had. AWS did not respond yet since April 2019. In addition to the deployment troubles, tracking down all of the api users and getting them to migrate to the new api took two months.",
+        "stack": ["gateway", "lambda", "ec2", "msk", "elasticache", "rds", "python"]
+    },
+    {
+        "name": "MyNotify Rewrite",
+        "start": "July 2019",
+        "end": "July 2019",
+        "description": "MyNotify was a 5000 line main method java application that was referred to as the worst java \"script\" that we have ever seen. It processed events from a directory before sending the results to Event Management. No one wanted to touch the code because it was really intimidating looking at a poorly coded application. There were try-catches around every other line of code (for no reason), none of the connections were being closed, and the application kept locking up. Any time a change was made to the application or the credentials changed in the properties file, we manually had to push the changes out to ~30 servers one by one. I hated the idea that this was wasting so much of my team's time, so I redesigned the application and added a way to remotely push the artifact and new secrets via chef. I spent four days rewriting the code, four days creating a chef cookbook for the application, and one day on testing and deploying.",
+        "challenges": "Reading the code was terrible. In my entire career, I have never seen such lack of structure nor lack of knowledge in programming put into such a critical application. After sucessfully copying over all of the original functionality, I had troubles with adding chef on Windows Server 2003. We had 15 windows servers, and they were all configured entirely different. Majority of my time testing and deploying was trying to get the chef clients to check in. Since these servers were across networks, I had a difficult time configuring the servers to be able to connect back to the chef server. On the other hand, the 12 linux servers took 10 minutes of my time.",
+        "stack": ["chef", "java"]
+    },
+    {
+        "name": "BGP Alert Ticketing",
+        "start": "July 2019",
+        "end": "July 2019",
+        "description": "In Event Management we were only able to create incidents in Service Now if the alert mapped to a valid asset in the system. The border gateway protocol (BGP) alerts were triggered with one of many ip addreses for an asset, but Service Now only kept track of one ip address per asset. I added a component that allowed the system to do a reverse lookup on the ip address to get the hostname for Service Now.",
+        "challenges": "The actual solution took two days to stand up the dns api and add a modular component that resolved the ip address to a Service Now asset. The difficulty of this project was the miscommunication and language barrier between other network engineers. I tried four different solutions before the right solution was accepted. Other challenges with this project was that I was unable to reach the dns server from AWS, so I had to put an api that got the hostname from inside GE network.",
+        "stack": ["python", "nodejs", "express", "chef"]
+    },
+    {
+        "name": "Ticket Relationship Correlation",
+        "start": "July 2019",
+        "end": "Present",
+        "description": "In an effort to reduce the operational noise, I wanted to correlate tickets created on assets with the asset's upstream relationships. If a server went down, for example, I wanted to create a ticket for the router that it was connected to. This played an important role since widespread network outages at GE meant that more than 1000 servers could generate tickets in Service Now, while only one ticket on the upstream router would have been needed. It saved operations engineers from having to waste time combing through the massive dump of incidents and closing them out as well as saving money from not having to hire more operations engineers as the workload decreased. My choice to use a graph database was also intended to be used in the future for role based access control to manage the front end for Event Management.",
+        "challenges": "The most difficult thing about this project is learning gremlin in python. It is very hard to find documentation on the language, so I ended up reading the source code to learn how to use the module.",
+        "stack": ["python", "gremlin", "neptune"]
     }
 ]

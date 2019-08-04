@@ -7,9 +7,8 @@ import Info from './Info';
 import SectionHeader from './SectionHeader';
 import Job from './Job';
 import Project from './Project';
-import Certification from './Certification';
 import Skill from './Skill';
-import Slide from 'react-reveal/Slide'
+// import Slide from 'react-reveal/Slide'
 import { isMobile } from 'react-device-detect';
 import '../css/App.css';
 import '../css/Music.css';
@@ -19,7 +18,6 @@ import '../css/Notifications.css';
 import jobs from '../assets/data/jobs.json';
 import bio from '../assets/data/bio.json';
 import skills from '../assets/data/skills.json';
-import certifications from '../assets/data/certifications.json';
 import projects from '../assets/data/projects.json';
 import playlist from '../assets/data/playlist.json';
 import months from '../assets/static/months.json';
@@ -116,7 +114,7 @@ class App extends Component {
    * @returns long timestamp
    */
   getTimestamp(date) {
-    if (date === "") {
+    if (date === "" || date === "Present") {
       return new Date().getTime();
     }
     const datetime = date.split(" ");
@@ -153,11 +151,7 @@ class App extends Component {
   }
 
   getSkillPanels() {
-    return skills.map((s) => <Skill key={s} name={s}/>)
-  }
-
-  getCertificationPanels() {
-    return certifications.map((c) => <Certification key={c.name} name={c.name} image={c.image}/>)
+    return Object.keys(skills).map((s) => <Skill key={s} name={s}/>)
   }
 
   getProjectPanels() {
@@ -182,42 +176,28 @@ class App extends Component {
               </Jumbotron>
               <Waypoint onEnter={this.showMusicToastMessage}/>
             </Row>
-            <Slide bottom>
-              <Row>
-                <SectionHeader text="About Me"/>
-                <Col md={12}>
-                  <h4 className="skinny">
-                    {bio.text} 
-                    &nbsp;I currently have {this.getYearsOfExperience(bio.development_start)} of experience.
-                  </h4>
-                </Col>
-              </Row>
-            </Slide>
-            <Slide bottom>
-              <Row>
-                <SectionHeader text="Skills"/>
-                {this.getSkillPanels()}
-              </Row>
-            </Slide>
-            <Slide bottom>
-              <Row>
-                <SectionHeader text="Certifications"/>
-                {this.getCertificationPanels()}
-              </Row>
-            </Slide>
-            <Slide bottom>
-              <Row>
-                <SectionHeader text="Employment"/>
-                {this.getJobPanels()}
-                <Waypoint onEnter={this.showTileToastMessage}/>
-              </Row>
-            </Slide>
-            <Slide bottom>
-              <Row>
-                <SectionHeader text="Projects"/>
-                {this.getProjectPanels()}
-              </Row>
-            </Slide>
+            <Row>
+              <SectionHeader text="About Me"/>
+              <Col md={12}>
+                <h4 className="skinny">
+                  {bio.text} 
+                  &nbsp;I currently have {this.getYearsOfExperience(bio.development_start)} of experience.
+                </h4>
+              </Col>
+            </Row>
+            <Row>
+              <SectionHeader text="Highlights"/>
+              {this.getSkillPanels()}
+            </Row>
+            <Row>
+              <SectionHeader text="Employment"/>
+              {this.getJobPanels()}
+              <Waypoint onEnter={this.showTileToastMessage}/>
+            </Row>
+            <Row>
+              <SectionHeader text="Projects"/>
+              {this.getProjectPanels()}
+            </Row>
           </Grid>
         </div>
       </div>
