@@ -5,7 +5,7 @@
         "start": "February 2019",
         "end": "",
         "logo": "general_electric.png",
-        "description": "After a year of being on call 24/7 and working on features for all of the platforms I inherited, I received a well deserved promotion. I worked 12 - 15 hours a day as well as on weekends when needed because I cared about the company and took every defect/bug personally. I actually enjoyed working extra because it was just me doing what I loved."
+        "description": "In this role, I was given much more responsbility. I transferred sole ownership of the monitoring platform over to engineers new to the team. Operational and maintenence work was still my responsibility, I had enough free time to build out an event pipeline for all of the monitoring events. Using the skills I learned from my previous role, I made sure that I had full visibility into the availability, reliability and any errors for the platform; so much that I was able to see front-facing errors before or at the same time the connected applications saw errors."
     },
     {
         "title": "Lifecycle Operations Engineer",
@@ -13,7 +13,7 @@
         "start": "December 2017",
         "end": "February 2019",
         "logo": "general_electric.png",
-        "description": "Moving to GE is the best thing I've ever done. The tech stack is pretty large which exposed me to many languages and applications. I got to see the different coding styles and design patterns. Everyone at this company was smart, and I did not hesitate to learn from them. My role started out as a developer, but quickly turned into more of a site reliability engineer. I learned the ins and outs of linux and windows machines as well as many languages. Although GE was going through a tough transitional period, I found it to be the most challenging and exciting part about the company."
+        "description": "In this role I was first introduced to monitoring and metrics. I focused efforts to automate mundane tasks that were common and shaved off days worth of work into a few minutes of time. While still learning the systems, I refactored many codebases to be more readable, less redundant and optimized. I took the monitoring platform availability from ~80% up to 99.99998%. Through metrics and monitoring the platform itself, I was able to accurately determine my availability."
     },
     {
         "title": "Software Engineer",
@@ -29,6 +29,6 @@
         "start": "August 2013",
         "end": "May 2015",
         "logo": "georgia_gwinnett.png",
-        "description": "After my first semester of java programming, my professor saw that I had enough talent to recommend me to be a programming tutor. I saw it as an opportunity to get ahead. Although I was not the strongest tutor in the college, I unofficially sat in on advanced programming classes to better my skills and better aid more advanced students."
+        "description": "In this role, I learned the ins and outs of fundamental object-oriented programming. Aftering taking advanded java programming, I went back and talked to a professor that I knew well, and she allowed me to sit in on her class. I made sure I understood every concept and was not just going through the motion."
     }
 ]
