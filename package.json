@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://landondao.com",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "gh-pages": "^1.2.0",
     "react": "^16.4.2",
     "react-bootstrap": "^0.32.3",
