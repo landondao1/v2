@@ -2,7 +2,7 @@
   "name": "profile",
   "version": "0.4.2",
   "private": true,
-  "homepage": "https://landondao1.github.io/v2",
+  "homepage": "https://landondao.com",
   "dependencies": {
     "gh-pages": "^1.2.0",
     "react": "^16.4.2",
