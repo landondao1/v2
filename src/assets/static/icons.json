@@ -1,175 +1,175 @@
 {
     "react": {
         "name": "React",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/react.png"
+        "image": "react.png"
     },
     "angular": {
         "name": "Angular",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/angular.png"
+        "image": "angular.png"
     },
     "javascript": {
         "name": "Javascript",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/javascript.png"
+        "image": "javascript.png"
     },
     "html": {
         "name": "HTML",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/html.png"
+        "image": "html.png"
     },
     "css": {
         "name": "CSS",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/css.png"
+        "image": "css.png"
     },
     "java": {
         "name": "Java",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/java.png"
+        "image": "java.png"
     },
     "mysql": {
         "name": "MySQL",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/mysql.png"
+        "image": "mysql.png"
     },
     "bash": {
         "name": "Bash",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/bash.png"
+        "image": "bash.png"
     },
     "powershell": {
         "name": "Powershell",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/powershell.png"
+        "image": "powershell.png"
     },
     "python": {
         "name": "Python",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/python.png"
+        "image": "python.png"
     },
     "ruby": {
         "name": "Ruby",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/ruby.png"
+        "image": "ruby.png"
     },
     "chef": {
         "name": "Chef",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/chef.png"
+        "image": "chef.png"
     },
     "ansible": {
         "name": "Ansible",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/ansible.png"
+        "image": "ansible.png"
     },
     "sensu": {
         "name": "Sensu",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/sensu.png"
+        "image": "sensu.png"
     },
     "rabbitmq": {
         "name": "RabbitMQ",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/rabbitmq.png"
+        "image": "rabbitmq.png"
     },
     "influxdb": {
         "name": "InfluxDB",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/influxdb.png"
+        "image": "influxdb.png"
     },
     "nginx": {
         "name": "Nginx",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/nginx.png"
+        "image": "nginx.png"
     },
     "aws": {
         "name": "AWS",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/aws.png"
+        "image": "aws.png"
     },
     "redis": {
         "name": "Redis",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/redis.png"
+        "image": "redis.png"
     },
     "github": {
         "name": "GitHub",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/github.png"
+        "image": "github.png"
     },
     "msk": {
         "name": "AWS MSK",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/msk.png"
+        "image": "msk.png"
     },
     "ec2": {
         "name": "AWS EC2",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/ec2.png"
+        "image": "ec2.png"
     },
     "elasticache": {
         "name": "AWS Elasticache",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/elasticache.png"
+        "image": "elasticache.png"
     },
     "rds": {
         "name": "AWS RDS",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/rds.png"
+        "image": "rds.png"
     },
     "kafka": {
         "name": "Kafka",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/kafka.png"
+        "image": "kafka.png"
     },
     "neptune": {
         "name": "Neptune",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/neptune.png"
+        "image": "neptune.png"
     },
     "gremlin": {
         "name": "Gremlin",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/gremlin.png"
+        "image": "gremlin.png"
     },
     "tornado": {
         "name": "Tornado",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/tornado.png"
+        "image": "tornado.png"
     },
     "gateway": {
         "name": "AWS API Gateway",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/gateway.png"
+        "image": "gateway.png"
     },
     "lambda": {
         "name": "AWS Lambda",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/lambda.png"
+        "image": "lambda.png"
     },
     "express": {
         "name": "Express",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/express.png"
+        "image": "express.png"
     },
     "nodejs": {
         "name": "NodeJS",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/nodejs.png"
+        "image": "nodejs.png"
     },
     "mongo": {
         "name": "Mongo",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/mongo.png"
+        "image": "mongo.png"
     },
     "postgres": {
         "name": "Postgres",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/postgres.png"
+        "image": "postgres.png"
     },
     "atlas": {
         "name": "Netflix Atlas",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/atlas.png"
+        "image": "atlas.png"
     },
     "grafana": {
         "name": "Grafana",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/grafana.png"
+        "image": "grafana.png"
     },
     "handlebars": {
         "name": "Handlebars",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/handlebars.png"
+        "image": "handlebars.png"
     },
     "wildfly": {
         "name": "WildFly",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/wildfly.png"
+        "image": "wildfly.png"
     },
     "apache": {
         "name": "Apache",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/apache.png"
+        "image": "apache.png"
     },
     "jboss": {
         "name": "JBoss",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/jboss.png"
+        "image": "jboss.png"
     },
     "mssql": {
         "name": "Microsoft SQL Server",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/mssql.png"
+        "image": "mssql.png"
     },
     "terraform": {
         "name": "Terraform",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/terraform.png"
+        "image": "terraform.png"
     },
     "jsf": {
         "name": "JavaServer Faces",
-        "image": "https://github.com/landondao1/v2/raw/master/public/img/jsf.png"
+        "image": "jsf.png"
     },
     "aws_sysops_administrator": {
         "name": "AWS SysOps Administrator",
