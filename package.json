@@ -1,6 +1,6 @@
 {
   "name": "profile",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "private": true,
   "homepage": "https://landondao.com",
   "dependencies": {

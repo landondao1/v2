@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Waypoint from 'react-waypoint';
 import ReactNotification from "react-notifications-component";
 import { Grid, Row, Col, Jumbotron } from 'react-bootstrap';
-import MusicPlayer from 'react-responsive-music-player'
+// import MusicPlayer from 'react-responsive-music-player'
 import Info from './Info';
 import SectionHeader from './SectionHeader';
 import Job from './Job';
@@ -27,42 +27,42 @@ class App extends Component {
     super(props);
 
     this.state = {
-      showMusicToast: true,
+      // showMusicToast: true,
       showTileToast: true
     }
 
-    this.showMusicToastMessage = this.showMusicToastMessage.bind(this);
+    // this.showMusicToastMessage = this.showMusicToastMessage.bind(this);
     this.showTileToastMessage = this.showTileToastMessage.bind(this);
     this.notificationDOMRef = React.createRef();
   }
 
-  componentDidMount() {
-    // set the volume to 50%
-    const volumeBar = document.getElementsByClassName("progress")[0]
-    const volume = volumeBar.getBoundingClientRect().x + (volumeBar.offsetWidth/2)
-    const click = document.createEvent("MouseEvent");
-    click.initMouseEvent("click" ,true, true, window, null, 0, 0, volume, 0, false, false, false, false, 0, null);
-    volumeBar.dispatchEvent(click);
-  }
+  // componentDidMount() {
+  //   // set the volume to 50%
+  //   const volumeBar = document.getElementsByClassName("progress")[0]
+  //   const volume = volumeBar.getBoundingClientRect().x + (volumeBar.offsetWidth/2)
+  //   const click = document.createEvent("MouseEvent");
+  //   click.initMouseEvent("click" ,true, true, window, null, 0, 0, volume, 0, false, false, false, false, 0, null);
+  //   volumeBar.dispatchEvent(click);
+  // }
 
   // TODO: make the show popup function modular
-  showMusicToastMessage() {
-    if (this.state.showMusicToast) {
-      this.notificationDOMRef.current.addNotification({
-        title: "Just like MySpace days!",
-        message: "Play some music as you read my portfolio.",
-        type: "info",
-        insert: "top",
-        container: "top-right",
-        animationIn: ["animated", "fadeIn"],
-        animationOut: ["animated", "fadeOut"],
-        dismiss: { duration: 7000 },
-        dismissable: { click: true },
-        isMobile: isMobile
-      });
-    }
-    this.setState({showMusicToast: false})
-  }
+  // showMusicToastMessage() {
+  //   if (this.state.showMusicToast) {
+  //     this.notificationDOMRef.current.addNotification({
+  //       title: "Just like MySpace days!",
+  //       message: "Play some music as you read my portfolio.",
+  //       type: "info",
+  //       insert: "top",
+  //       container: "top-right",
+  //       animationIn: ["animated", "fadeIn"],
+  //       animationOut: ["animated", "fadeOut"],
+  //       dismiss: { duration: 7000 },
+  //       dismissable: { click: true },
+  //       isMobile: isMobile
+  //     });
+  //   }
+  //   this.setState({showMusicToast: false})
+  // }
 
   showTileToastMessage() {
     if (this.state.showTileToast) {
@@ -170,12 +170,12 @@ class App extends Component {
         </div>
         <div id="page" className="content-panel">
           <Grid>
-            <Row className="show-grid centered">
+            {/* <Row className="show-grid centered">
               <Jumbotron>
                 <MusicPlayer playlist={playlist}/>
               </Jumbotron>
               <Waypoint onEnter={this.showMusicToastMessage}/>
-            </Row>
+            </Row> */}
             <Row>
               <SectionHeader text="About Me"/>
               <Col md={12}>

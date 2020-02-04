@@ -18,7 +18,7 @@ class Info extends Component {
     const polaroid = (
       <div className="polaroid">
           <div className="polaroid-picture">
-            <img className="expanded-width" src={"img/" + name} alt={text}></img>
+            <img className="expanded-width" src={require("../css/img/" + name)} alt={text}></img>
           </div>
           <span className="polaroid-text">{text}</span>
         </div>

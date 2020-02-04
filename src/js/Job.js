@@ -24,7 +24,7 @@ class Job extends Component {
                 <Col md={12}>
                     <Panel className="no-hover">
                     <Panel.Body className="no-padding">
-                        <img className="full-width" src={"img/" + image} alt={name}/>
+                        <img className="full-width" src={require("../css/img/" + image)} alt={name}/>
                     </Panel.Body>
                     <Panel.Footer>{name}</Panel.Footer>
                     </Panel>
@@ -41,7 +41,7 @@ class Job extends Component {
 
     render() {
         const end = this.props.job.end === "" ? "Present" : this.props.job.end;
-        const imgDir = "img/" + this.props.job.logo;
+        const imgDir = require("../css/img/" + this.props.job.logo);
         return (
             <Col xs={12} sm={6} md={4}>
                 <Panel className="clickable centered" onClick={this.showPopup}>

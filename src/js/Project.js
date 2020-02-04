@@ -24,7 +24,7 @@ class Project extends Component {
     const popover = <Popover id={skill.name}>This project uses {skill.name}</Popover>;
     return (
       <OverlayTrigger key={skill.name} trigger={['hover']} placement="top" overlay={popover}>
-        <img className="tiny-image" src={"img/" + skill.image} alt={skill.name}/>
+        <img className="tiny-image" src={require("../css/img/" + skill.image)} alt={skill.name}/>
       </OverlayTrigger>
     );
   }
@@ -39,7 +39,7 @@ class Project extends Component {
         <Col md={12}>
           <Panel className="no-hover">
             <Panel.Body className="no-padding">
-              <img className="full-width" src={"img/" + image} alt={name}/>
+              <img className="full-width" src={require("../css/img/" + image)} alt={name}/>
             </Panel.Body>
             <Panel.Footer>{name}</Panel.Footer>
           </Panel>
